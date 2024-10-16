@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Resource Files\Shaders">
+      <UniqueIdentifier>{a7ffa985-40f1-492c-85aa-5c3f1e35fbf0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Shapes">
+      <UniqueIdentifier>{ce8a76b3-d2bf-4e77-adf3-d591249dac94}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Shapes">
+      <UniqueIdentifier>{eb5e31fc-f8bd-49c9-8baa-2560258f9a0f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Shaders\canvas">
+      <UniqueIdentifier>{f6768b4e-315e-4423-a4fb-68d9e07b3508}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Shaders\canvasgc">
+      <UniqueIdentifier>{b49ea40f-4543-4606-98ad-86944b77054b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Shaders\canvasproj">
+      <UniqueIdentifier>{b0b01893-28c5-47e3-8b75-10431e2ae9cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Shaders\canvasprojgc">
+      <UniqueIdentifier>{a30aa971-d1a8-4ddf-9095-0bb31171519c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Shaders\sphere">
+      <UniqueIdentifier>{cb069840-1a6d-4abe-82ca-cc7c0091a9b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Shaders\bg">
+      <UniqueIdentifier>{f659a132-8112-4ccf-94df-9867bf49c17c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="glad.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EBO.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="shaderClass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VAO.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VBO.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Shape.cpp">
+      <Filter>Source Files\Shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="Sphere.cpp">
+      <Filter>Source Files\Shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="CanvasShape.cpp">
+      <Filter>Source Files\Shapes</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="EBO.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="shaderClass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VAO.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VBO.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Shape.h">
+      <Filter>Header Files\Shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="Sphere.h">
+      <Filter>Header Files\Shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="ShapeIncluder.h">
+      <Filter>Header Files\Shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="CanvasShape.h">
+      <Filter>Header Files\Shapes</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="canvas.frag">
+      <Filter>Resource Files\Shaders\canvas</Filter>
+    </None>
+    <None Include="canvas.vert">
+      <Filter>Resource Files\Shaders\canvas</Filter>
+    </None>
+    <None Include="canvasgc.frag">
+      <Filter>Resource Files\Shaders\canvasgc</Filter>
+    </None>
+    <None Include="canvasgc.geom">
+      <Filter>Resource Files\Shaders\canvasgc</Filter>
+    </None>
+    <None Include="canvasgc.vert">
+      <Filter>Resource Files\Shaders\canvasgc</Filter>
+    </None>
+    <None Include="canvasproj.frag">
+      <Filter>Resource Files\Shaders\canvasproj</Filter>
+    </None>
+    <None Include="canvasproj.vert">
+      <Filter>Resource Files\Shaders\canvasproj</Filter>
+    </None>
+    <None Include="canvasprojgc.frag">
+      <Filter>Resource Files\Shaders\canvasprojgc</Filter>
+    </None>
+    <None Include="canvasprojgc.geom">
+      <Filter>Resource Files\Shaders\canvasprojgc</Filter>
+    </None>
+    <None Include="canvasprojgc.vert">
+      <Filter>Resource Files\Shaders\canvasprojgc</Filter>
+    </None>
+    <None Include="sphere.frag">
+      <Filter>Resource Files\Shaders\sphere</Filter>
+    </None>
+    <None Include="sphere.vert">
+      <Filter>Resource Files\Shaders\sphere</Filter>
+    </None>
+    <None Include="bg.frag">
+      <Filter>Resource Files\Shaders\bg</Filter>
+    </None>
+    <None Include="bg.vert">
+      <Filter>Resource Files\Shaders\bg</Filter>
+    </None>
+  </ItemGroup>
+</Project>
