@@ -6,6 +6,8 @@
 
 class VAO
 {
+
+	//AAAAAAAAAAAA
 public:
 	// ID reference for the Vertex Array Object
 	GLuint ID;
