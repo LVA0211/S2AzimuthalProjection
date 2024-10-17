@@ -151,5 +151,8 @@
     <None Include="bg.vert">
       <Filter>Resource Files\Shaders\bg</Filter>
     </None>
+    <None Include="canvasproj.geom">
+      <Filter>Resource Files\Shaders\canvasproj</Filter>
+    </None>
   </ItemGroup>
 </Project>

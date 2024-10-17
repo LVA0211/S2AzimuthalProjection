@@ -192,6 +192,7 @@
     <None Include="canvasgc.geom" />
     <None Include="canvasgc.vert" />
     <None Include="canvasproj.frag" />
+    <None Include="canvasproj.geom" />
     <None Include="canvasproj.vert" />
     <None Include="canvasprojgc.frag" />
     <None Include="canvasprojgc.geom" />

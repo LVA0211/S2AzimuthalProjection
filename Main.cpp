@@ -65,7 +65,7 @@ int main()
 	Shader canvasPointProgram("canvas.vert", "canvas.frag");
 	Shader canvasLinesProgram("canvasgc.vert", "canvasgc.frag", "canvasgc.geom");
 
-	Shader projPointProgram("canvasproj.vert", "canvasproj.frag");
+	Shader projPointProgram("canvasproj.vert", "canvasproj.frag","canvasproj.geom");
 	Shader projLinesProgram("canvasprojgc.vert", "canvasprojgc.frag", "canvasprojgc.geom");
 
 	Shader backgroundProgram("bg.vert", "bg.frag");

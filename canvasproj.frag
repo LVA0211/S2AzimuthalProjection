@@ -5,7 +5,7 @@ out vec4 FragColor;
 
 
 // Inputs the color from the Vertex Shader
-in vec3 color;
+in vec3 geomColor;
 
 
 void main()
@@ -14,5 +14,5 @@ void main()
 
 	if (length(coord)>0.5) discard;
 
-	FragColor = vec4(color, 1.0);
+	FragColor = vec4(geomColor, 1.0);
 }
