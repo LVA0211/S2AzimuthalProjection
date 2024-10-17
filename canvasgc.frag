@@ -2,7 +2,7 @@
 
 out vec4 FragColor;  // Output color of the fragment
 
-uniform vec3 lineColor = vec3(0.0, 0.0, 0.0);  // Line color (default green)
+const vec3 lineColor = vec3(0.0, 0.0, 0.0);// Line color (default green)
 
 void main()
 {

@@ -112,17 +112,7 @@ int main()
 		Game::updateDT();
 		camera.Inputs(window, canvas, Game::dt);
 
-		glViewport(0, 0, windowWidth, windowHeight);
-
-		backgroundProgram.Activate();
-		glUniform2i(glGetUniformLocation(backgroundProgram.ID, "viewportSize"),windowWidth,windowHeight);
-		glUniform1f(glGetUniformLocation(backgroundProgram.ID, "scale"),Camera::zooms[camera.currentZoom]);
-		bgvao.Bind();
-		glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, (void*)0);
-		bgvao.Unbind();
-		glClear(GL_DEPTH_BUFFER_BIT);
-
-
+		//!LEFT HALF
 		glViewport(0, 0, windowWidth / 2, windowHeight);
 
 		//! DRAW SPHERE
@@ -145,6 +135,15 @@ int main()
 		//!RIGHT HALF
 		glViewport(windowWidth / 2, 0,windowWidth/2, windowHeight);
 		
+		backgroundProgram.Activate();
+		glUniform2i(glGetUniformLocation(backgroundProgram.ID, "viewportSize"), windowWidth, windowHeight);
+		glUniform1f(glGetUniformLocation(backgroundProgram.ID, "scale"), Camera::zooms[camera.currentZoom]);
+		bgvao.Bind();
+		glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, (void*)0);
+		bgvao.Unbind();
+		glClear(GL_DEPTH_BUFFER_BIT);
+
+
 		projPointProgram.Activate();
 		glUniform3f(glGetUniformLocation(projPointProgram.ID,"projPos"),camera.Position.x,camera.Position.y,camera.Position.z);
 		glUniform3f(glGetUniformLocation(projPointProgram.ID, "Up"), camera.Up.x, camera.Up.y, camera.Up.z);

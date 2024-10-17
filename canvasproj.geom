@@ -12,7 +12,7 @@ uniform vec3 Right;
 uniform vec3 projPos;
 
 const float PI = 3.14159265358979323846;
-const float epsilon = 0.01;
+const float epsilon = 0.1;
 
 const vec4 aspect = vec4(PI,PI*9/8,1,1);
 
@@ -30,9 +30,7 @@ vec3 project(vec3 P,vec3 C){
 void main()
 {
 	vec3 projection = project(projPos,gl_in[0].gl_Position.xyz);
-
-	if(projection.z > PI-epsilon){projection.z = PI-epsilon;}
-
+	//if(projection.z > PI-epsilon){return;}
 	geomColor = color[0];
 	gl_PointSize = 10.0;
 	for (int i = -2;i<=2;i++){

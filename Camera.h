@@ -25,13 +25,9 @@ private:
 
 	unsigned int width, height;
 
-	enum Mode {
-		SELECT = 0,
-		CREATE = 1,
-		CONNECT = 2
-	};
+	glm::vec3 m_OriginalPosition;
 
-	Mode mode = SELECT;
+	void Reset();
 public:
 	glm::vec3 Position;
 	glm::vec3 Up;

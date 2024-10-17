@@ -5,6 +5,7 @@ Camera::Camera(unsigned int width, unsigned int height, glm::vec3 position, floa
 	Camera::height = height;
 
 	Position = glm::normalize(position);
+	m_OriginalPosition = glm::normalize(position);
 
 	Camera::FOVdeg = FOVdeg;
 	Camera::nearPlane = nearPlane;
@@ -12,6 +13,13 @@ Camera::Camera(unsigned int width, unsigned int height, glm::vec3 position, floa
 
 	Camera::Right = glm::normalize(glm::cross(glm::vec3(0, 1, 0), Position));
 	Camera::Up = glm::normalize(glm::cross(Position,Right));
+}
+
+void Camera::Reset() {
+	Position = m_OriginalPosition;
+
+	Camera::Right = glm::normalize(glm::cross(glm::vec3(0, 1, 0), Position));
+	Camera::Up = glm::normalize(glm::cross(Position, Right));
 }
 
 glm::mat4 Camera::GetViewMatrix(){
@@ -71,23 +79,28 @@ void Camera::Inputs(GLFWwindow* window, CanvasShape& canvas, double delta)
 	// Paralleltransport --> Rotate the point by a axis and update the other axis by rotating it too
 	if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
 	{
-		Position = glm::rotate(Position, -SPEED * (float)delta, Right);
-		Up = glm::rotate(Up, -SPEED * (float)delta, Right);
+		Position = glm::normalize(glm::rotate(Position, -SPEED * (float)delta, Right));
+		Up = glm::normalize(glm::rotate(Up, -SPEED * (float)delta, Right));
 	}
 	if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS)
 	{
-		Position = glm::rotate(Position, -SPEED * (float)delta, Up);
-		Right = glm::rotate(Right, -SPEED * (float)delta, Up);
+		Position = glm::normalize(glm::rotate(Position, -SPEED * (float)delta, Up));
+		Right = glm::normalize(glm::rotate(Right, -SPEED * (float)delta, Up));
 	}
 	if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS)
 	{
-		Position = glm::rotate(Position, SPEED * (float)delta, Right);
-		Up = glm::rotate(Up, SPEED * (float)delta, Right);
+		Position = glm::normalize(glm::rotate(Position, SPEED * (float)delta, Right));
+		Up = glm::normalize(glm::rotate(Up, SPEED * (float)delta, Right));
 	}
 	if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
 	{
-		Position = glm::rotate(Position, SPEED * (float)delta, Up);
-		Right = glm::rotate(Right, SPEED * (float)delta, Up);
+		Position = glm::normalize(glm::rotate(Position, SPEED * (float)delta, Up));
+		Right = glm::normalize(glm::rotate(Right, SPEED * (float)delta, Up));
+	}
+
+	if (glfwGetKey(window, GLFW_KEY_R) == GLFW_PRESS)
+	{
+		Reset();
 	}
 
 

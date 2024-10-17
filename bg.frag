@@ -1,23 +1,30 @@
 #version 330 core
 
+in vec2 fragPosition;
+
 out vec4 FragColor;  // Output color of the fragment
 
-const vec3 leftColor = vec3(0.176f, 0.541f, 0.275f);  // Line color (default green)
-const vec3 rightColor = vec3(0.4,0.4,0.4);
+const vec2 aspect = vec2(1.0,9.0/8.0);
+const float PI = 3.14159265358979323846;
 
-uniform ivec2 viewportSize;
+const vec3 meColor = vec3(0,0,1);
+const vec3 antiMeColor = vec3(0,0,0);
 
 uniform float scale;
 
 void main()
 {
-    if(gl_FragCoord.x/viewportSize.x < 0.5){
-        FragColor = vec4(leftColor,1.0);
-    } else {
-        if (distance(gl_FragCoord.xy,vec2(0.75,0.5)*viewportSize)<0.25*viewportSize.x*scale){
-            FragColor = vec4(vec3(0.9),1.0);
-        } else {
-            FragColor = vec4(rightColor,1.0);
-        }
-    }
+	float len = length(fragPosition*aspect)/scale;
+
+	float val_ = cos(PI*len);
+
+	float val = pow(val_,1000)*val_;
+	
+	if (val > 0){
+		FragColor = vec4(val*meColor + (1-val)*vec3(1),1);
+	} else {
+		FragColor = vec4(-val*antiMeColor + (1+val)*vec3(1),1);
+	}
+
+
 }
