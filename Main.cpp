@@ -14,6 +14,7 @@
 
 #include "ShapeIncluder.h"
 
+//Set starting 720p resolution
 int windowHeight = 720;
 int windowWidth = 1280;
 
